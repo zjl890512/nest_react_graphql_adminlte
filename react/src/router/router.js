@@ -40,4 +40,4 @@ const getRouter = () => (
     </Router>
 );
 
-export default getRouter;   
+export default getRouter;
