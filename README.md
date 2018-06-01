@@ -9,3 +9,16 @@
 ```
 npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react babel-preset-stage-0
 ```
+> 加入less
+````
+npm install less less-loader --save-dev
+````
+> 字体load
+
+````
+npm install font-awesome-webpack file-loader --save
+````
+
+#TODO
+
+> 尝试webpack热替换方案
