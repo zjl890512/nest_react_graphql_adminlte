@@ -22,3 +22,14 @@ npm install font-awesome-webpack file-loader --save
 #TODO
 
 > 尝试webpack热替换方案
+
+> new webpack.optimize.CommonsChunkPlugin 已经不能使用
+
+```
+替换方案是
+    optimization:{
+        splitChunks:{
+            name: 'vendor'
+        }
+    },
+```
