@@ -1,5 +1,7 @@
 
 \.DS_Store
+*/.idea/
 .idea/
+.idea/*
 node_modules
 react/dist
