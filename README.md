@@ -33,3 +33,9 @@ npm install font-awesome-webpack file-loader --save
         }
     },
 ```
+
+ 
+> css单独打包
+```
+npm install --save-dev extract-text-webpack-plugin
+```
