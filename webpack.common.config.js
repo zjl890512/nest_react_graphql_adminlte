@@ -5,6 +5,7 @@ const webpack = require('webpack');
 commonConfig = {
     entry: {
         app: [
+            "babel-polyfill",
             path.join(__dirname, 'react/src/index.js')
         ],
         vendor: ['react', 'react-router-dom', 'redux', 'react-dom', 'react-redux']
@@ -20,12 +21,6 @@ commonConfig = {
             test: /\.js$/,
             use: ['babel-loader?cacheDirectory=true'],
             include: path.join(__dirname, 'react/src')
-        }, {
-            test: /\.css$/,
-            use: ['style-loader', 'css-loader']
-        }, {
-            test: /\.less$/,
-            use: ['style-loader', 'css-loader', 'less-loader']
         }, {
             test: /\.(png|jpg|gif)$/,
             use: [{
@@ -46,8 +41,8 @@ commonConfig = {
         }),
         new webpack.HashedModuleIdsPlugin()
     ],
-    optimization:{
-        splitChunks:{
+    optimization: {
+        splitChunks: {
             name: 'vendor'
         },
         runtimeChunk: {

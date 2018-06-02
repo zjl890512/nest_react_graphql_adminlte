@@ -39,3 +39,5 @@ npm install font-awesome-webpack file-loader --save
 ```
 npm install --save-dev extract-text-webpack-plugin
 ```
+
+> 踩坑: webpack.common.config.js 的 module.rules 里面不能与 其他配置文件中出现重复,会报错

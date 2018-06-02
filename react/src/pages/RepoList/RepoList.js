@@ -13,9 +13,6 @@ class RepoList extends Component {
             content = <span>{content}</span>
         } else {
             content = '';
-            console.log('-----------------');
-            console.log(repoList.items);
-            console.log('-----------------');
             if(repoList.items){
                 let repos = repoList.items;
                 let repoItems = repos.map(function (repo, index) {
@@ -24,7 +21,6 @@ class RepoList extends Component {
                     );
                 });
                 content = <ol>{repoItems}</ol>;
-                console.log(content);
             }
 
         }

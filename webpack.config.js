@@ -8,6 +8,15 @@ const commonConfig = require('./webpack.common.config.js');
 const publicConfig = {
     devtool: 'cheap-module-source-map',
     mode: 'production',
+    module: {
+        rules: [{
+            test: /\.css$/,
+            use: ExtractTextPlugin.extract({
+                fallback: "style-loader",
+                use: ["css-loader", "postcss-loader"]
+            })
+        }]
+    },
     plugins: [
         new CleanWebpackPlugin(['react/dist/*.*']),
         new UglifyJSPlugin(),
