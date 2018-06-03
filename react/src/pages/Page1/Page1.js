@@ -5,7 +5,7 @@ export default class Page1 extends Component {
     render() {
         return (
             <div className={style["page-box"]}>
-                this is Page1~
+                this is Page123~
             </div>
         )
     }
