@@ -7,7 +7,6 @@ const initState = {
 };
 
 export default function reducer(state = initState, action) {
-    console.log(action);
     switch (action.type){
         case GET_REPO_LIST_REQUEST :
             return {

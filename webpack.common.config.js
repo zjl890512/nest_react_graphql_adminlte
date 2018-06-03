@@ -55,7 +55,8 @@ commonConfig = {
             components: path.join(__dirname, 'react/src/components'),
             router: path.join(__dirname, 'react/src/router'),
             actions: path.join(__dirname, 'react/src/redux/actions'),
-            reducers: path.join(__dirname, 'react/src/redux/reducers')
+            reducers: path.join(__dirname, 'react/src/redux/reducers'),
+            mock: path.join(__dirname, 'react/mock')
         }
     }
 };

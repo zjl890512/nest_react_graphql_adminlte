@@ -1,6 +1,7 @@
 const merge = require('webpack-merge');
 const path = require('path');
 const commonConfig = require('./webpack.common.config.js');
+const webpack = require('webpack');
 
 const devConfig = {
     mode: "development",
@@ -25,6 +26,11 @@ const devConfig = {
             use: ["style-loader", "css-loader", "postcss-loader"]
         }]
     },
+    plugins:[
+        new webpack.DefinePlugin({
+            MOCK: true
+        })
+    ],
     devServer: {
         port: 8080,
         contentBase: path.join(__dirname, './react'),
