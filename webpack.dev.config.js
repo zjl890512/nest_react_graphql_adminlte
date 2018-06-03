@@ -23,7 +23,7 @@ const devConfig = {
     module: {
         rules: [{
             test: /\.(css|scss)$/,
-            use: ["style-loader", "css-loader", "postcss-loader"]
+            use: ["style-loader", "css-loader?modules&localIdentName=[local]-[hash:base64:5]", "postcss-loader"]
         }]
     },
     plugins:[
