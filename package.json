@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-build": "webpack --config webpack.dev.config.js",
     "build": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server --config webpack.dev.config.js --color --progress --hot"
+    "start": "webpack-dev-server --config webpack.dev.config.js --color --progress --hot",
+    "mock": "json-server react/mock/mock.js --watch --port 8090",
+    "mockdev": "npm run mock & npm run start"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,7 @@
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     "jquery": "^3.3.1",
+    "json-server": "^0.13.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "mockjs": "^1.0.1-beta3",
